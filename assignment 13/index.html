@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="head-con">
+        <img src="landscape_logo.png" alt="">
+        <div class="anger">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <select name="train" id="train" onchange="redirectPage(this)">
+  <option value="" disabled selected>Trainings</option>
+  <option value="web.html">Web and Mobile Application Development</option>
+  <option value="flutter.html">Flutter Application Development</option>
+  <option value="graphic.html">Graphic Design and Video Editing</option>
+  <option value="digital.html">Digital and Social Media Marketing</option>
+  <option value="block.html">Blockchain Development</option>
+</select>
+
+            <a href="#contact">Contact Us</a>
+        </div>
+    </div>
+
+<script>
+  function redirectPage(select) {
+    const page = select.value;
+    if (page) {
+      select.selectedIndex = 0;
+      window.location.href = page;
+    }
+  }
+
+  window.addEventListener('pageshow', function (event) {
+    document.getElementById("train").selectedIndex = 0;
+  });
+</script>
+
+    <div class="container">
+        <div class="txt-box">
+            <div class="intro">
+                <h2>introduction to jawan pakistan</h2>
+            </div>
+            <p>The foundation of every state is the education and skills set of its youth. Jawan Pakistan is such an organization of Pakistan who is not only working on youth education but also enhancing skills set in youth either Free of cost or in a very low cost. This initiative, initially developed by a single person and with almost no seed capital, promotes entrepreneurship and innovation and Sustainable Development Goal, which promotes inclusive and sustainable economic growth.</p>
+        </div>
+        <div class="img-box">
+            <img src="1.png" alt="internet">
+        </div>
+    </div>
+
+
+    <div class="second-con">
+        <div class="image2">
+            <img src="2.png" alt="internet nahi he bhai jaan">
+        </div>
+        <div id="about" class="mission-txt">
+            <div class="head-txt">
+                <h3>Mission And Vision
+                Behind Jawan Pakistan</h3>
+            </div>
+            <p>Our vision is to bring our students into the 21st century through innovation and modern technology. To create a better every day life for every people. This program is not only impacting the youth in monetary perspective but it is also creating some deep-rooted, long-term psychological effects e.g. minimizing frustration among the unemployed youth. <br><br><br>
+            Our mission is to provide high quality education that connects young people with opportunities to transform their lives. The educated youngsters who remain unemployed gets frustrated, depressed and disheartened when they do not succeed in getting their dream jobs. This training reinforces the educated youth to earn well through freelancing, develop variety of skills through specified domains and promote entrepreneurial culture that diverts youths potentials for constructive purposes. This energy diversion definitely make the youth more confident, self-reliant and constructive asset for a progressing economy.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="sir">
+        <img src="image.jpg" alt="no internet">
+        <div class="line"></div>
+        <h3>MUHAMMAD ALI MUGHAL</h3>
+        <p>Founder of Jawan Pakistan</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+              <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+            </svg>
+    <p>We aim to be most efficient provider of business process outsourcing services by setting the industry standards for cost and quality of services. Our long term success will be driven by our relentless focus on recruiting and developing the most talented pool of human capital in our industry.</p>
+    </div>
+
+
+    <div class="boxes">
+        <h2>IT Trainings offering in Jawan Pakistan</h2>
+        <div class="box1">
+            <img src="3.png" alt="no internet">
+            <p>Web and Mobile Application Development</p>
+        </div>
+
+        <div class="box1">
+            <img src="4.jpeg" alt="no internet">
+            <p>Flutter Mobile Application Development</p>
+        </div>
+
+        <div class="box1">
+            <img src="7.jpg" alt="no internet">
+            <p>Best Graphic Design And Video Editing</p>
+        </div>
+        
+        <div class="box2">
+            <img src="5.png" alt="no internet">
+            <p>Digital And Social Media Marketing</p>
+        </div>
+        <div class="box2">
+            <img src="6.jpg" alt="no internet">
+            <p>BlockChain Development</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <h2>Glimpses of sessions conducted by Jawan Pakistan</h2>
+        <img src="photo1.jpg" alt="no">
+        <img class="img2" src="photo2.jpg" alt="no">
+        <img class="img3" src="photo3.jpg" alt="no">
+        <img class="img4" src="photo4.jpg" alt="no">
+        <img class="img5" src="photo5.jpg" alt="no">
+        <img class="img5" src="photo6.jpg" alt="no">
+    </div>
+    <hr>
+
+    <div id="contact" class="contact">
+            <div class="form">
+                <h2>Contact</h2>
+                <form action="">
+                    <div class="lab-inp">
+                        <label for="name">Name<p>*</p></label><br>
+                        <input type="text" required>
+                    </div>
+                    <div class="lab-inp">
+                        <label for="name">Email<p>*</p></label><br>
+                        <input type="email" placeholder="abc@gmail.com" required>
+                    </div>
+                    <div class="lab-inp">
+                        <label for="name">Phone Number<p>*</p></label><br>
+                        <input type="number" placeholder="03001223567" required>
+                    </div>
+                    <div class="lab-mess">
+                        <label for="name">Message<p>*</p></label><br>
+                        <textarea name="des" id="" required></textarea>
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+  <hr>
+    <footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="landscape_logo.png" alt="no internet">
+    </div>
+
+    <div class="footer-links">
+      <h4>COMPANY</h4>
+      <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Trainings</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>CONTACT DETAILS</h4>
+      <p>Muhammad Ali Mughal</p>
+      <p>+923005292675</p>
+      <p>jawantechpk@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+
+      <div class="last-box">
+  <p>&copy; 2022 Jawan Pakistan</p>
+  <div class="social-icons">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-linkedin-in"></i>
+  </div>
+</div>
+
+
+</body>
+</html>
