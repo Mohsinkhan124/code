@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#" class="text-2xl font-bold text-indigo-600">MyShop</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#" class="text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-indigo-600">Shop</a>
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="text-gray-700 hover:text-indigo-600 inline-flex items-center">
+            Categories
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Men</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Women</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Electronics</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Accessories</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-gray-700 hover:text-indigo-600">Deals</a>
+      </div>
+
+      <!-- Search -->
+      <div class="hidden md:flex items-center">
+        <input type="text" placeholder="Search products..." class="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+
+      <!-- Cart & Login -->
+      <div class="flex items-center space-x-4">
+        <!-- Cart -->
+        <a href="#" class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9h14l-2-9M10 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" />
+          </svg>
+          <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">3</span>
+        </a>
+
+        <!-- Login -->
+        <a href="#" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Login</a>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none" id="menu-btn">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Shop</a>
+    <div>
+      <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100" id="mobile-categories-btn">Categories ▼</button>
+      <div class="hidden" id="mobile-categories-menu">
+        <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Men</a>
+        <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Women</a>
+        <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Electronics</a>
+        <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Accessories</a>
+      </div>
+    </div>
+    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Deals</a>
+  </div>
+</nav>
+
+<!-- Script -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileCatBtn = document.getElementById('mobile-categories-btn');
+  const mobileCatMenu = document.getElementById('mobile-categories-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileCatBtn.addEventListener('click', () => {
+    mobileCatMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to MyShop</h1>
+      <p class="text-lg mb-6">Find the best products at unbeatable prices.</p>
+      <a href="#products" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Shop by Category</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://static.tossdown.com/images/a9513543-e27d-4bf0-81af-58f4a86a9424.webp" class="w-full h-40 object-cover">
+          <div class="p-4 text-center font-semibold">Men</div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x200" class="w-full h-40 object-cover">
+          <div class="p-4 text-center font-semibold">Women</div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x200" class="w-full h-40 object-cover">
+          <div class="p-4 text-center font-semibold">Electronics</div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x200" class="w-full h-40 object-cover">
+          <div class="p-4 text-center font-semibold">Accessories</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section id="products" class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Featured Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x300" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Product Name</h3>
+            <p class="text-gray-600">$99.99</p>
+            <button class="mt-3 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Add to Cart</button>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x300" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Product Name</h3>
+            <p class="text-gray-600">$79.99</p>
+            <button class="mt-3 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Add to Cart</button>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x300" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Product Name</h3>
+            <p class="text-gray-600">$49.99</p>
+            <button class="mt-3 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Add to Cart</button>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+          <img src="https://via.placeholder.com/300x300" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Product Name</h3>
+            <p class="text-gray-600">$59.99</p>
+            <button class="mt-3 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-12 bg-indigo-600 text-white text-center">
+    <div class="max-w-xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
+      <p class="mb-6">Get the latest updates on new products and upcoming sales.</p>
+      <form class="flex flex-col sm:flex-row gap-4">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none">
+        <button class="bg-white text-indigo-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div>
+        <h3 class="font-bold mb-4">MyShop</h3>
+        <p>Your one-stop shop for the best products online.</p>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Shop</a></li>
+          <li><a href="#" class="hover:underline">Categories</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Customer Service</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">FAQs</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook--v1.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-gray-400 text-sm">
+      © 2025 MyShop. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
